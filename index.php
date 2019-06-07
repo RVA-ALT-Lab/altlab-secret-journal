@@ -113,7 +113,7 @@ add_filter( 'the_content', 'secure_the_journal' );
 
 
 
-//hide posts from other authors for author level users __ even if editor can't see the other posts
+//hide posts from other authors for author level users __ even if editor can't edit the other posts
 function posts_for_current_author($query) {
     global $pagenow;
     if( 'edit.php' != $pagenow || !$query->is_admin )
